@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Форма входа</title>
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="title">Login To Your Account / Register New</h3>
+      <div class="form">
+        <div class="form-head">
+          <h1 class="title-form">Login To Your Account / Register New</h1>
+        </div>
+        <div class="form-body">
+          <div class="form-login">
+            <form id="form-login" action="login.php" method="post">
+              <input
+                class="form-text"
+                id="user-name"
+                type="text"
+                name="user_name"
+                placeholder="User Name"
+                pattern="^[a-zA-Z]+$"
+                required
+              />
+              <input
+                class="form-text"
+                id="user-password"
+                type="password"
+                name="user_password"
+                placeholder="Password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+                required
+              />
+              <div class="group">
+                <label class="check" for="check">
+                  <input
+                    class="form-check"
+                    id="check"
+                    type="checkbox"
+                    name="user_check"
+                  />
+                  <i class="check-box"></i>
+                  Remember My Password
+                </label>
+                <input
+                  class="form-button"
+                  type="submit"
+                  name="submit"
+                  value="Login"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="form-register">
+            <form id="form-register" action="register.php" method="post">
+              <h3 class="reg-title">Register</h3>
+              <label for="reg-mail">Email</label>
+              <input
+                class="form-reg"
+                id="reg-mail"
+                type="email"
+                name="user_mail"
+                pattern="^.+@.+\..+$"
+                required
+              />
+              <label for="reg-name">User Name</label>
+              <input
+                class="form-reg"
+                id="reg-name"
+                type="text"
+                name="user_name"
+                pattern="^[a-zA-Z]+$"
+                required
+              />
+              <label for="reg-password">Password</label>
+              <input
+                class="form-reg"
+                id="reg-password"
+                type="password"
+                name="user_password"
+                pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*"
+                required
+              />
+              <input
+                class="form-reg-button"
+                type="submit"
+                name="submit"
+                value="Register"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/csript.js"></script>
+  </body>
+</html>
