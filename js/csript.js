@@ -30,9 +30,11 @@ v.forEach((ev) => {
         const regex = new RegExp(ev.getAttribute("pattern"));
         let lab = document.querySelector("label[for='" + ev.getAttribute("id") + "']");
         if (ev.value != "" && regex.test(ev.value)) {
+            lab.classList.remove("in-valid");
             lab.classList.add("valid");
             err = true;
         } else {
+            lab.classList.remove("valid");
             lab.classList.add("in-valid");
             err = false;
         }
